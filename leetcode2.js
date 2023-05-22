@@ -10,6 +10,6 @@ Explanation: The answer is "abc", with the length of 3.
  * @return {number}
  */
 var lengthOfLongestSubstring = function (s) {
-    return s.match(//)
+  return s.split('')
 };
 console.log(lengthOfLongestSubstring("abcabcbb"));
