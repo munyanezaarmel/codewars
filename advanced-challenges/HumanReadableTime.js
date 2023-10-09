@@ -25,13 +25,14 @@ describe('tests', function() {
 
 
 function humanReadable (seconds) {
-    const hours =Math.trunc(seconds/3600)
-    const min = Math.trunc((seconds - (3600 * hours)) / 60);
-    const sec = Math.trunc(seconds - (3600 * hours) - (60 * min));
-    const formattedHours = hours.toString().padStart(2, '0');
-    const formattedMinutes = min.toString().padStart(2, '0');
-    const formattedSeconds = sec.toString().padStart(2, '0');
   
-    return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;  
+   const hours= Math.trunc(seconds/3600)
+   const min =Math.trunc((seconds-(3600*hours))/60)
+   const sec =Math.trunc((seconds-(hours*3600)-(min*60)))
+   const formatedHOurs=hours.toString().padStart(2,'0')
+   const formatedMIn=min.toString().padStart(2,'0')
+   const formatedSec=sec.toString().padStart(2,'0')
+      return `${formatedHOurs}:${formatedMIn}:${formatedSec}`
+
   }
   console.log(humanReadable(60))
