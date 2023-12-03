@@ -21,3 +21,7 @@ Route::get('/', function () {
         'listings'=>Listings::all()]);
 });
 
+Route::get('/listings/${id}',function($id){
+    return  view('Listings',['listings'=>Listings::find($id)
+]); 
+});
