@@ -1,13 +1,2 @@
-<h1>{{$heading}}</h1>
+<h1>hello app</h1>
 
-@unless (count($listings)==0)
-@foreach ($listings as $listing)
- <h2>
-    {{$listing['title']}}
-    </h2>
-    <p>{{$listing['description']}}</p>   
-@endforeach
-@else
-<p>no listings found</p>
-    
-@endunless
